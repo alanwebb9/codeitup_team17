@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="patient">
+        <id>JJ123</id>
+        <id>JJ124</id>
+        <id>JJ125</id>
+        <id>JJ126</id>
+        <id>JJ127</id>
+        <id>JJ128</id>
+        <id>JJ129</id>
+        <id>JJ1200</id>
+        <id>JJ12001</id>
+        <id>JJ12002</id>
+
+
+
+
+
+
+
+
+    </string-array>
+
+</resources>

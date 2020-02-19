@@ -1,5 +1,7 @@
 package com.jj.happymother;
 
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,7 +13,12 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class SearchPatient extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +36,28 @@ public class SearchPatient extends AppCompatActivity {
             }
 
 
-            final Button seachButon = findViewById(R.id.search_patient_btn);
-            final EditText inputId = findViewById(R.id.input_patient_id);
-            String inputIdValue = inputId.getText().toString();
 
 
+        });
+
+        final Button searchButon = findViewById(R.id.search_patient_btn);
+        final EditText inputId = findViewById(R.id.input_patient_id);
 
 
+        final String inputIdValue = inputId.getText().toString();
 
+        searchButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Resources res = getResources();
+                boolean resultFound = SearchPatient.searchCandidate(inputIdValue,res);
+                if(resultFound){
+                    // Launch New ACtivity
+                    //Intent patientIntent = new Intent(this,PaitientActivityDetail.class);
+                    //startActivity(patientIntent);
+                }
 
-
+            }
         });
     }
 
@@ -65,11 +84,28 @@ public class SearchPatient extends AppCompatActivity {
     }
 
 
-    public void searchCandidate(String patientId){
+    // Search Candidate if present in the list
+    public static boolean searchCandidate(String patientId,Resources resources) {
+        // Delete White Spaces
+        patientId.trim();
+        Resources res = resources;
+        String[] clientPool = res.getStringArray(R.array.patient);
+        // Convert array to array list
+        ArrayList client = (ArrayList) Arrays.asList(clientPool);
 
 
+        // Try if the list is empytp or not.
+        if(!client.isEmpty() && client!=null) {
 
+
+            return client.contains(patientId.toString());
+
+        }else return false;
 
     }
+
+
+
+
 
 }
