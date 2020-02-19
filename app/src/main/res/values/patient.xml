@@ -2,16 +2,16 @@
 <resources>
 
     <string-array name="patient">
-        <id>JJ123</id>
-        <id>JJ124</id>
-        <id>JJ125</id>
-        <id>JJ126</id>
-        <id>JJ127</id>
-        <id>JJ128</id>
-        <id>JJ129</id>
-        <id>JJ1200</id>
-        <id>JJ12001</id>
-        <id>JJ12002</id>
+        <item>JJ123</item>
+        <item>JJ124</item>
+        <item>JJ125</item>
+        <item>JJ126</item>
+        <item>JJ127</item>
+        <item>JJ128</item>
+        <item>JJ129</item>
+        <item>JJ1200</item>
+        <item>JJ12001</item>
+        <item>JJ12002</item>
 
 
 
