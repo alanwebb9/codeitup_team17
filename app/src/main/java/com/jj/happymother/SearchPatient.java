@@ -53,8 +53,8 @@ public class SearchPatient extends AppCompatActivity {
                 boolean resultFound = SearchPatient.searchCandidate(inputIdValue,res);
                 if(resultFound){
                     // Launch New ACtivity
-                    //Intent patientIntent = new Intent(this,PaitientActivityDetail.class);
-                    //startActivity(patientIntent);
+                    Intent patientIntent = new Intent(getApplicationContext(),PatientDetails.class);
+                    startActivity(patientIntent);
                 }
 
             }
@@ -89,18 +89,20 @@ public class SearchPatient extends AppCompatActivity {
         // Delete White Spaces
         patientId.trim();
         Resources res = resources;
-        String[] clientPool = res.getStringArray(R.array.patient);
-        // Convert array to array list
-        ArrayList client = (ArrayList) Arrays.asList(clientPool);
-
-
-        // Try if the list is empytp or not.
-        if(!client.isEmpty() && client!=null) {
-
-
-            return client.contains(patientId.toString());
-
-        }else return false;
+//        String[] clientPool = res.getStringArray(R.array.patient);
+//        // Convert array to array list
+//       // ArrayList client = (ArrayList) Arrays.asList(clientPool);
+//
+//
+//        // Try if the list is empytp or not.
+//        if(!client.isEmpty() && client!=null) {
+//
+//
+//            return client.contains(patientId.toString());
+//
+//        }else return false;
+//
+        return true;
 
     }
 

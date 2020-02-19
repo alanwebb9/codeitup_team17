@@ -28,6 +28,13 @@
 
         </activity>
 
+        <activity android:name=".PatientDetails" />
+        <activity android:name=".PatientHistory" />
+        <activity android:name=".PatientDemography" />
+
+
+        <!--</activity>-->
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
