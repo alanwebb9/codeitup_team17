@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class SearchPatient extends AppCompatActivity {
 
@@ -25,6 +27,18 @@ public class SearchPatient extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
+
+
+            final Button seachButon = findViewById(R.id.search_patient_btn);
+            final EditText inputId = findViewById(R.id.input_patient_id);
+            String inputIdValue = inputId.getText().toString();
+
+
+
+
+
+
+
         });
     }
 
@@ -49,4 +63,13 @@ public class SearchPatient extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void searchCandidate(String patientId){
+
+
+
+
+    }
+
 }
